@@ -4,6 +4,8 @@ n <- readline(prompt="Do you want to start? (y/n)\n")
 if (n == "y"){
         cat("This will take some time... Sit back, relax and enjoy!\n")
         rm(n)
+        
+        ## Function for loading files into memory
         loadFiles <- function(filepath, extension = ".txt"){
                 ## Loads files ending in "extension" into variables named as the filename without the extension.
                 ## We start at j=2 so we skip the root direcrory "UCI HAR Dataset", since we loaded it separately.
@@ -22,7 +24,7 @@ if (n == "y"){
                 VarNames
         }
         
-        
+        ## Function that enters raw data into data frames
         toDf <- function(x){
                 cat("\nLoading raw data into dataframes\n")
                 for (i in 1:length(x))
@@ -34,6 +36,7 @@ if (n == "y"){
                 }
         }
         
+        ## Function that converts data frames into tbl_df
         toTbl <- function(x) {
                 ## Removes leading and trailing spaces, and loads contents into dataframes. 
                 ## Dataframes are named as x
@@ -51,7 +54,9 @@ if (n == "y"){
         ## Load features and labels into dataframes
         filepath <- "./UCI HAR Dataset"
         features <- read.delim(paste0(filepath,"/features.txt"),sep=" ", header=FALSE, col.names=c("Id","feature"))
+        features <- tbl_df(features)
         activitylabels <- read.delim(paste0(filepath,"/activity_labels.txt"),sep=" ", header=FALSE, col.names =c("Id","activity"))
+        activitylabels <- tbl_df(activitylabels)
         
         cat("\nRoot directory loaded...\n")
         
@@ -61,7 +66,6 @@ if (n == "y"){
         filepath <- "./UCI HAR Dataset"
         paths <- paste0(list.dirs(filepath),"/")
         Variables <- loadFiles(paths)
-        n
         cat("\nRaw Data loaded...\n")
         
         ## insert raw data into to dataframes
@@ -73,8 +77,15 @@ if (n == "y"){
         n <- readline(prompt="Do you want to keep raw data? (y/n)\n")
         if (n=="n"){
                 rm(list=ls(pattern = "^raw_"))
-        } else {cat("\nYou're all done with data loading\n")}
+                
+        } else {cat("\nYou're all done with data loading\n")
+                
+        }
+        rm(n,filepath,loadFiles,paths,toDf,toTbl, Variables) 
 } else {
         cat("\nokthxbye\n")
         rm(n)
 }
+
+## Cleanup
+
