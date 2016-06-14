@@ -1,7 +1,9 @@
 ## get_files.R
+## /!\ N.B commands work on OSX, not on windows. /!\
+
 ## 1. create and set working directory
-## 2. download needed files
-## 3. 
+## 2. download the zip file as data.zip
+## 3. unzip data.zip into working directory
 
 setwd("~/datasciencecoursera")
 
