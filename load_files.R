@@ -1,6 +1,6 @@
 ## /!\ N.B commands work on OSX, not on windows. /!\
 ## Your working directory needs to be the directory where "UCI HAR Dataset" directory is located
-n <- readline(prompt="Do you want to start? (y/n)\n")
+n <- readline(prompt="Do you want to load data from files into R? (y/n)\n")
 if (n == "y"){
         cat("This will take some time... Sit back, relax and enjoy!\n")
         rm(n)
@@ -12,7 +12,10 @@ if (n == "y"){
                 cat("\nLoading Raw Data\n")
                 VarNames <- vector(mode="character")
                 files <- vector(mode="character")
-                for (j in 2:length(filepath)){
+                # Based on directory listing, we are interested only in folders 2 and 4, hence j in c(2,4)
+                # Replace with j in 2:length(filepath) to get all files except from root directory.        
+                # j in 1:length(filepath) if you want also root directory.               
+                for (j in c(2,4)){
                         files <- dir(filepath[j],paste0(extension,"$"))
                         for (i in 1:length(files))  {
                                 VarName <-  paste0("raw_",sub(extension,"",files[i]))
@@ -74,18 +77,8 @@ if (n == "y"){
         toTbl(Variables)
         cat("\nDataframes converted to tbl_df...\n\n")
         
-        n <- readline(prompt="Do you want to keep raw data? (y/n)\n")
-        if (n=="n"){
-                rm(list=ls(pattern = "^raw_"))
-                
-        } else {cat("\nYou're all done with data loading\n")
-                
-        }
         rm(n,filepath,loadFiles,paths,toDf,toTbl, Variables) 
-} else {
-        cat("\nokthxbye\n")
-        rm(n)
-}
+} 
 
 ## Cleanup
 

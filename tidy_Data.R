@@ -1,4 +1,11 @@
-##join y_test and activitylabels
+##  tidyData.R   ##
+# Gets activity Names based on Activity ID
+# Adds labels to measurments columns  
+# Adds activity names to measurements data set (activity column)
+# Adds subject information to subject column
+# Adds a column that tells if the data comes from test or train data set.
+# Returns TestSet and TrainSet data frames
+# Removes all objects in memory except TestSet and TrainSet (if user confirms)
 
 ## Test data set  
 names(y_test) <- "activity_id"
@@ -17,5 +24,5 @@ X_train$activity <- trainLabels$activity
 X_train$subject <- subject_train$V1
 TrainSet <- X_train
 
-## Cleanup: Removes all variables except TestSet and TrainSet
-rm(list=ls()[! ls() %in% c("TestSet", "TrainSet")])
+
+
