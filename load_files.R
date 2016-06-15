@@ -77,8 +77,7 @@ if (n == "y"){
         toTbl(Variables)
         cat("\nDataframes converted to tbl_df...\n\n")
         
-        rm(n,filepath,loadFiles,paths,toDf,toTbl, Variables) 
 } 
 
-## Cleanup
+
 
