@@ -1,1 +1,1 @@
-rm(FullNames,GroupedSet,MeanStdNames,X_test,X_train,activitylabels,features,i,raw_X_test,raw_X_train,raw_subject_test,raw_subject_train,raw_y_test,raw_y_train,subject_test,subject_train,testLabels,trainLabels,x,y_test,y_train,Variables,filepath,loadFiles,paths,toDf,toTbl)
+rm(FullNames,feat, GroupedSet,MeanStdNames,X_test,X_train,activitylabels,features,i,raw_X_test,raw_X_train,raw_subject_test,raw_subject_train,raw_y_test,raw_y_train,subject_test,subject_train,testLabels,trainLabels,x,y_test,y_train,Variables,filepath,loadFiles,paths,toDf,toTbl)

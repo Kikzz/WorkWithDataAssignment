@@ -11,8 +11,8 @@ tidyr v.0.4.1
 * **run_analysis.R**: Main script that calls the other scripts listed below.  
 -- **loadLibraries.R**: Loads *dplyr* and *tidyr* libraries.  
 -- **get_files.R**: Downloads the files needed for the analysis and unzips them in your working directory.  
--- **load_files.R**: Loads the needed files into R variables.  
--- **tidy_Data.R**: Does some cleanup.  
+-- **load_files.R**: Loads the needed files into tbl_df variables.  
+-- **tidy_Data.R**: Does some cleanup. 
 -- **merge_group_mean.R**: merges datasets, makes groups and calculates means. Also exports results as a .csv file into your working directory.  
 -- **Cleanup.R**: Removes created temporary variables, leaving only results.  
 
