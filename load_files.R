@@ -26,7 +26,7 @@ loadFiles <- function(filepath, extension = ".txt"){
 
 ## Function that enters raw data into data frames
 toDf <- function(x){
-        cat("\nLoading raw data into dataframes\n")
+        cat("\nParsing raw data into dataframes\n")
         for (i in 1:length(x))
         {
                 temp <- textConnection(get(x[i]))
@@ -64,7 +64,6 @@ Variables <- vector(mode = "character")
 
 ## Load files row by row into vectors
 filepath <- file.path(getwd(),"UCI HAR Dataset")
-#paths <- paste0(list.dirs(filepath),"/")
 paths <- list.dirs(filepath)
 Variables <- loadFiles(paths)
 cat("\nRaw Data loaded...\n")
