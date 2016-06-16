@@ -1,5 +1,4 @@
 ## get_files.R
-## /!\ N.B commands work on OSX, not on windows. /!\
 
 ## 1. download the zip file as data.zip into working directory
 ## 2. unzip data.zip into working directory
