@@ -28,6 +28,6 @@ for (i in 3:length(x)) {
         x[i] <- paste0("Mean_",x[i])} 
 names(MeansDataSet) <- x
 
-write.table(MeansDataSet,file = "MeansDataSet.csv", sep = ",", row.names=FALSE)
+write.table(MeansDataSet,file = "MeansDataSet.txt", row.names=FALSE)
 cat("\nThe final results are stored in MeansDataSet variable. (step 5)")
 cat("\nMeansDataSet.csv file has been created in your working directory.")
