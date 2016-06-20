@@ -114,10 +114,10 @@ Test and train datasets are first merged using rbind command.
 We only want to keep data having calculations about means and standard deviations.  
 Of course we also want to keep the activity names and subjects.  
 This is done by running a grep function on the column names.  
-The search pattern being: column name contains "subject" OR "activity" OR "mean" without a letter behind OR "std".
+The search pattern being: column name contains "subject" OR "activity" OR "mean" OR "std".
 
 1. FullNames <-  names(FullSet)  
-2. MeanStdNames <- grep("subject|activity|mean[^aA-zZ]|std",FullNames, value = TRUE)  
+2. MeanStdNames <- grep("subject|activity|mean|std",FullNames, value = TRUE)  
 
 The resulting **MeanStdNames** vector is then used for subsetting the original merged data set.  
 
