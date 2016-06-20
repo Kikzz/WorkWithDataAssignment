@@ -39,6 +39,3 @@ trainLabels <- merge(y_train, activitylabels, by.x="activity_id", by.y="Id")
 names(X_train) <- feat
 X_train$activity <- trainLabels$activity
 X_train$subject <- subject_train$V1
-
-
-
