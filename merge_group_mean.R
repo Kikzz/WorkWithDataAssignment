@@ -10,7 +10,7 @@ cat("\nMerged Training and Test data sets are found in variable FullSet, (step 1
 # Get column names
 FullNames <-  names(FullSet)
 # Get column names having "subject" or "activity" or "mean without a letter behind", or "std" in the name.
-MeanStdNames <- grep("subject|activity|mean[^aA-zZ]|std",FullNames, value = TRUE)
+MeanStdNames <- grep("subject|activity|mean[^F]|std",FullNames, value = TRUE)
 # subset the merged dataset using the column names returned by the Regex
 DataSet <- FullSet[MeanStdNames]
 
