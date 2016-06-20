@@ -35,4 +35,4 @@ After cleanup, the script will have created 3 variables in your global environme
 * **DataSet**: Subset of FullSet, containing only variables related to mean and standard deviation (in addition to subject and activity).  
 * **MeansDataSet**: Final results, containing the mean for each measurement, grouped by activity and subject.
 
-In addition to that, you will find a **MeansDataSet.csv** file in your working directory containing the contents of MeansDataSet variable in a comma-separated format.   
+In addition to that, you will find **MeansDataSet.txt** and  **MeansDataSet.csv** files in your working directory containing the contents of MeansDataSet variable. (The csv file opens nicely in a table in github).
