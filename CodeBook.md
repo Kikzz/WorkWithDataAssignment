@@ -2,6 +2,7 @@
 
 The original description of the data can be found here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones#  
 This document describes the transformations that have been made to the data. For the meaning of the data, please refer to the link above.  
+A short description is available here:  https://github.com/Kikzz/WorkWithDataAssignment/blob/master/Dataset_ReadMe.md
 
 The original data set can be obtained here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip  
 

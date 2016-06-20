@@ -1,5 +1,7 @@
 # Getting and Cleaning Data assignment submission
-Some blabla
+This is my submission for Getting and Cleaning Data Course Project.
+Please read the instructions below to get started.
+
 
 ## Versions used
 R version 3.2.4 (2016-03-10)   
@@ -8,12 +10,12 @@ tidyr v.0.4.1
 
 ##R Scripts in use
 
-* **run_analysis.R**: Main script that calls the other scripts listed below.  
+- **run_analysis.R**: Main script that calls the other scripts listed below.  
 -- **loadLibraries.R**: Loads *dplyr* and *tidyr* libraries.  
 -- **get_files.R**: Downloads the files needed for the analysis and unzips them in your working directory.  
 -- **load_files.R**: Loads the needed files into tbl_df variables.  
--- **tidy_Data.R**: Does some cleanup. 
--- **merge_group_mean.R**: merges datasets, makes groups and calculates means. Also exports results as a .csv file into your working directory.  
+-- **tidy_Data.R**: Does some cleanup.  
+-- **merge_group_mean.R**: merges datasets, makes groups and calculates means, and exports results as a .csv file into your working directory.  
 -- **Cleanup.R**: Removes created temporary variables, leaving only results.  
 
 
