@@ -10,7 +10,7 @@ cat("\nMerged Training and Test data sets are found in variable FullSet, (step 1
 # Get column names
 FullNames <-  names(FullSet)
 # Get column names having "subject" or "activity" or "mean without a letter behind", or "std" in the name.
-MeanStdNames <- grep("subject|activity|mean[^F]|std",FullNames, value = TRUE)
+MeanStdNames <- grep("V1|activity|mean[^F]|std",FullNames, value = TRUE)
 # subset the merged dataset using the column names returned by the Regex
 DataSet <- FullSet[MeanStdNames]
 
@@ -19,6 +19,9 @@ cat("\nMean and Stardand deviation related variables are found in variable DataS
 ## From the data set in step 4, creates a second, 
 ## independent tidy data set with the average of each variable 
 ## for each activity and each subject.
+DataSet <- rename(DataSet,subject=V1)
+DataSet$activity_id <- NULL
+
 GroupedSet <- group_by(DataSet, activity, subject)
 MeansDataSet <- summarize_each(tbl=GroupedSet,funs(mean))
 
