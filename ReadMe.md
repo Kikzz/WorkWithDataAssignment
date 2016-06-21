@@ -11,7 +11,7 @@ tidyr v.0.4.1
 ##R Scripts in use
 
 - **run_analysis.R**: Main script that calls the other scripts listed below.  
-
+  
 -- **loadLibraries.R**: Loads *dplyr* and *tidyr* libraries.  
 -- **get_files.R**: Downloads the files needed for the analysis and unzips them in your working directory.  
 -- **load_files.R**: Loads the needed files into tbl_df variables.  
